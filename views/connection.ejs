@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>International Students Connect</title>
+  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/stylecss.css">
+</head>
+
+<body>
+  <header class="headerstyle">
+    <%- include('./partials/header.ejs') %>
+    <%- include('./partials/navigation.ejs') %>
+  </header>
+  <main>
+    <h2><%= connection.connectionName %></h2>
+    <br>
+    <div class="temp">
+      <table class="custom-table">
+        <tr>
+           <td class = "connection-td-width">
+            <!--<td width="10%"> -->
+            <img src="/assets/images/profile_pic.png" height="100" width="100" alt="Profile Pic">
+          </td>
+          <td>
+            <!--  class="connectiondetails" -->
+            <ul>
+              <li>Hosted by: <%= connection.hostedby %></li>
+              <li><%= connection.date %></li>
+              <li><%= connection.time %></li>
+              <li><%= connection.location %></li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <h3><br>Details</h3>
+    <p><br><%= connection.details %></p>
+
+  </main>
+
+  <aside>
+    Are you going? <br>
+    <% if (!isUpdate) {%>
+    <a href="/userRoutes/connection/save?action=save&connectionID=<%= connection.connectionID %>&rsvp=Yes" class="button"> Yes</a>
+    <a href="/userRoutes/connection/save?action=save&connectionID=<%= connection.connectionID %>&rsvp=No" class="button button1">No</a>
+    <a href="/userRoutes/connection/save?action=save&connectionID=<%= connection.connectionID %>&rsvp=Maybe" class="button button2">Maybe</a>
+    <%} else {%>
+      <a href="/userRoutes/connection/save?action=update&connectionID=<%= connection.connectionID %>&rsvp=Yes" class="button"> Yes</a>
+      <a href="/userRoutes/connection/save?action=update&connectionID=<%= connection.connectionID %>&rsvp=No" class="button button1">No</a>
+      <a href="/userRoutes/connection/save?action=update&connectionID=<%= connection.connectionID %>&rsvp=Maybe" class="button button2">Maybe</a>
+    <%}%>
+  </aside>
+
+  <%- include('./partials/footer.ejs') %>
+
+</body>
+
+</html>

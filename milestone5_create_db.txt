@@ -1,0 +1,121 @@
+//Path = cd C:\Program Files\MongoDB\Server\4.2\bin
+
+//fire the script below to setup database.
+
+use NBAD_Project
+
+db.users.drop()
+db.connections.drop()
+db.userconnections.drop()
+db.userprofiles.drop()
+
+db.createCollection('users')
+db.createCollection('connections')
+db.createCollection('userconnections')
+db.createCollection('userprofiles')
+
+var user1 = {
+UserID: "1",
+UserName : "User1",
+Password : "12345",
+FirstName: "Ravina",
+LastName: "Gaikawad",
+Email: "rgaikawa@uncc.edu",
+Address1: "5555 University Terrace Drive Apt A",
+Address2: "",
+City: "Charlotte",
+State: "NC",
+ZipCode: 28262,
+Country: "United States"
+}
+
+var user2 = {
+UserID: "2",
+UserName : "User2",
+Password : "123",
+FirstName: "John",
+LastName: "Doe",
+Email: "JohnDoe@uncc.edu",
+Address1: "5555 University Terrace Drive Apt A",
+Address2: "",
+City: "Charlotte",
+State: "NC",
+ZipCode: 28262,
+Country: "United States"
+}
+
+db.users.insert(user1);
+db.users.insert(user2);
+
+var connection1 = {
+connectionID: "connection1",
+connectionName: "Football",
+connectionTopic: "Sports",
+hostedby: "Ravina Gaikawad",
+location: "University Recreational Center - Room 120",
+details: "I'd love to have someone join in Football team.",
+date: "Thursday January 27, 2020",
+time: "5:30pm - 6:30pm"
+}
+
+var connection2 = {
+connectionID: "connection2",
+connectionName: "Cricket",
+connectionTopic: "Sports",
+hostedby: "Ravina Gaikawad",
+location: "University Recreational Center - Room 120",
+details: "I'd love to have someone join in Cricket team.",
+date: "Thursday January 12, 2020",
+time: "5:30pm - 6:30pm"
+}
+
+var connection3 = {
+connectionID: "connection3",
+connectionName: "Rugby",
+connectionTopic: "Sports",
+hostedby: "Ravina Gaikawad",
+location: "University Recreational Center - Room 120",
+details: "I'd love to have someone join in Rugby team.",
+date: "Thursday January 27, 2020",
+time: "5:30pm - 6:30pm"
+}
+
+var connection4 = {
+connectionID: "connection4",
+connectionName: "Zumba",
+connectionTopic: "Group Fitness",
+hostedby: "Ravina Gaikawad",
+location: "University Recreational Center - Room 111",
+details: "I am a Fitness Freak. I'd love to have someone join me to zumba classes held in UREC.",
+date: "Thursday January 2, 2020",
+time: "5:30pm - 6:30pm"
+}
+
+var connection5 = {
+connectionID: "connection5",
+connectionName: "Cycling",
+connectionTopic: "Group Fitness",
+hostedby: "Ravina Gaikawad",
+location: "University Recreational Center - Room 122",
+details: "I am a Fitness Freak. I'd love to have someone join me to Cycling classes held in UREC.",
+date: "Thursday January 22, 2020",
+time: "5:30pm - 6:30pm"
+}
+
+var connection6 = {
+connectionID: "connection6",
+connectionName: "Abs and Stomach Workout",
+connectionTopic: "Group Fitness",
+hostedby: "Ravina Gaikawad",
+location: "University Recreational Center - Room 100",
+details: "I am a Fitness Freak. I'd love to have someone join me to Abs and Stomach Workout classes held in UREC.",
+date: "Thursday January 29, 2020",
+time: "5:30pm - 6:30pm"
+}
+
+db.connections.insert(connection1);
+db.connections.insert(connection2);
+db.connections.insert(connection3);
+db.connections.insert(connection4);
+db.connections.insert(connection5);
+db.connections.insert(connection6);

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>International Students Connect</title>
+  <link rel="stylesheet" type="text/css" href="assets/stylesheets/stylecss.css">
+</head>
+
+<body>
+  <header class="headerstyle">
+    <%- include('./partials/header.ejs') %>
+    <%- include('./partials/navigation.ejs') %>
+  </header>
+
+  <main>
+    <% if (errors != undefined) {
+      errors.forEach(function(term, index){%>
+        <p class="ErrorMessage"> <%= term.msg %></p>
+      <%})
+    }%>
+    <form action="/userRoutes/newConnection" method="POST" id="newConnection" class="container">
+      <div class="row">
+        <label for="topic" class="col-25"> Topic</label>
+        <input type="text" class="col-75" id="topic" name="topic" placeholder="Topic" value="" required />
+      </div>
+      <br>
+      <div class="row">
+        <label for="name" class="col-25"> Name</label>
+        <input type="text" class="col-75" id="name" name="name" placeholder="Name" value="" required/>
+      </div>
+      <br>
+      <div class="row">
+        <label for="details" class="col-25"> Details</label>
+        <input type="text" class="col-75" id="details" name="description" placeholder="Description" value="" required/>
+      </div>
+      <br>
+      <div class="row">
+        <label for="where" class="col-25"> Where</label>
+        <input type="text" class="col-75" id="where" name="location" placeholder="Location" value="" required/>
+      </div>
+      <br>
+      <div class="row">
+        <label for="when" class="col-25"> When</label>
+        <input type="date" class="col-75" id="when" name="date" value="" required/>
+      </div>
+      <br>
+      <div class="row">
+        <label for="start" class="col-25"> Start Time</label>
+        <input type="time" class="col-75" id="start" name="starttime" value="" required/>
+      </div>
+      <br>
+      <div class="row">
+        <label for="end" class="col-25"> End Time</label>
+        <input type="time" class="col-75" id="end" name="endtime" value="" required/>
+      </div>
+      <br>
+      <div class="row">
+        <input class="submit-button" type="submit" value="Create Connection" />
+      </div>
+    </form>
+  </main>
+
+
+  <%- include('./partials/footer.ejs') %>
+
+</body>
+
+</html>

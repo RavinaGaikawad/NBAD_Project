@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>International Students Connect</title>
+  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/stylecss.css">
+</head>
+
+<body>
+  <header class="headerstyle">
+    <%- include('./partials/header.ejs') %>
+    <%- include('./partials/navigation.ejs') %>
+  </header>
+
+  <main>
+    <h2>Ravina's Connections</h2>
+    <br>
+    <% if (data == undefined || data.length == 0) { %>
+    <p>
+      No Connections found!
+    </p>
+
+    <% } else { %>
+    <table>
+      <tr>
+        <th>Connection</th>
+        <th>Category</th>
+        <th>Going?</th>
+        <th>Actions</th>
+      </tr>
+      <%
+      var viewConnectionList = []
+      for(var i=0; i< data.length; i++){
+        viewConnectionList.push(data[i].Connection.connectionID);
+      }
+      for(var i=0; i< data.length; i++){ %>
+      <tr>
+        <td><%= data[i].Connection.connectionName %></td>
+        <td><%= data[i].Connection.connectionTopic %></td>
+        <td><%= data[i].rsvp %></td>
+        <td>
+          <form style="display: contents" class="" action="/userRoutes/connection/update/<%= data[i].Connection.connectionID %>" method="POST">
+            <input type="text" name="connectionlist" value="<%= viewConnectionList %>" hidden>
+            <input type="text" name="connectionID" value="<%= data[i].Connection.connectionID %>" hidden>
+            <button type="submit" name="Update" class="button button3">Update</button>
+          </form>
+          <form style="display: contents" class="" action="/userRoutes/connection/delete?action=delete&connectionID=<%= data[i].Connection.connectionID %>" method="POST">
+            <input type="text" name="connectionlist" value="<%= viewConnectionList %>" hidden>
+            <input type="text" name="connectionID" value="<%= data[i].Connection.connectionID %>" hidden>
+            <button class="button button3" type="submit" name="Delete">Delete</button>
+          </form>
+        </td>
+      </tr>
+      <% } %>
+    </table>
+    <% } %>
+  </main>
+
+  <%- include('./partials/footer.ejs') %>
+
+</body>
+
+</html>

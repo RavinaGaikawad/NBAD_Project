@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>International Students Connect</title>
+  <link rel="stylesheet" type="text/css" href="../assets/stylesheets/stylecss.css">
+</head>
+
+<body>
+
+  <header class="headerstyle">
+    <%- include('./partials/header.ejs') %>
+    <%- include('./partials/navigation.ejs') %>
+  </header>
+  <main>
+    <h3>Welcome to International Students Connect!</h3>
+    <img class="index_image" src="../../assets/images/InternationalStudents.jpg" height="200" width="300" alt="Main Page International Students image">
+    <br>
+    <br>
+    <% if (error != null || error != undefined){ %>
+        <h4 class="ErrorMessage"><%= error %></h4>
+    <% } %>
+    <form action="/UserRoutes/Login" method="POST" id="newConnection" class="container">
+      <div class="row">
+        <label for="username" class="col-25"> Username</label>
+        <input type="text" class="col-75" id="username" name="username" value="" required/>
+        <label for="password" class="col-25"> Password</label>
+        <input type="password" class="col-75" id="password" name="password" value="" required/>
+      </div>
+      <div class="row">
+        <input class="login-button" type="submit" value="Login" />
+      </div>
+    </form>
+  </main>
+  <%- include('./partials/footer.ejs') %>
+
+</body>
+
+</html>

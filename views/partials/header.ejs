@@ -1,0 +1,13 @@
+<a href="/index"><img src="/assets/images/Logo_updated.png" width="300" height="150" alt="Website Logo"></a>
+<nav>
+  <ul>
+    <li><a href="/newConnection">Start a new connection</a></li>
+    <% if(isLoggedIn) {%>
+    <li><a href="/savedConnections">My Connections</a></li>
+    <li><a href="/UserController/Logout">Logout</a></li>
+    <%} else {%>
+    <li><a href="/UserController/login">Login</a></li>
+    <li><a href="/UserController">SignUp</a></li>
+    <%}%>
+  </ul>
+</nav>

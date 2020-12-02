@@ -1,0 +1,295 @@
+@charset "UTF-8";
+
+article, footer, header, main, nav, section {
+}
+
+html, body, h1, h2, h3, ul, li, a, p,
+article, aside, footer, header, main, nav, section {
+  padding: 0;
+  margin: 0;
+}
+
+.headerstyle {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+}
+
+body {
+  margin-left: auto;
+  float: left;
+  margin-right: auto;
+  background-color: white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  width: 100%;
+  overflow: auto;
+}
+
+nav {
+  display: inline;
+  background-color: black;
+  padding: 5px;
+  margin-top: 1px;
+}
+
+
+ul {
+  float: right;
+  margin-top: 25px;
+}
+
+li a {
+  color: white;
+  padding-right: 40px;
+  text-decoration: none;
+}
+
+li {
+  display: inline;
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 20px;
+  font-variant: normal;
+}
+
+p a {
+  color: black;
+  text-decoration: none;
+}
+
+hr{
+  color: white;
+  min-width: 100%;
+  margin-right: -20px;
+  margin-left: -20px;
+}
+
+.welcomeconnections {
+  display: inline-block;
+  background-color: black;
+  padding: 10px;
+  margin-top: 1px;
+  width: 100%;
+}
+
+.welcomeconnections ul {
+  float: left;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+.welcomeconnections li a {
+  color: white;
+  text-decoration: none;
+}
+
+.welcomeconnections li {
+  display: inline;
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 20px;
+  font-variant: normal;
+}
+
+.welcomeconnections li p {
+  color: green;
+  float: right;
+  display: inline;
+  margin-left: 850px;
+  margin-top: -23px;
+  margin-right: 30px;
+  font-size: 20px;
+  font-variant: normal;
+  width: 100%;
+  text-align: right;
+  font-weight: bold;
+}
+
+a:hover {
+  color: green;
+}
+
+nav ul li a:hover {
+  color: green;
+}
+
+main {
+  margin-bottom: 10px;
+  margin-top: 20px;
+  padding: 25px 70px;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  clear: both;
+  background-color: black;
+  color: white;
+  padding: 5px 20px;
+  text-align: left;
+}
+
+.socialmedia {
+  margin-top: -15px;
+  display: inline-block;
+  float: right;
+  margin-right: 25px;
+}
+
+/* .connectiondetails {
+  margin-top: -100px;
+  display: block;
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 15px;
+  float: left;
+  font-variant: normal;
+  position: relative;
+} */
+
+/* .connectiondetails li {
+  font-size: 15px;
+  float: left;
+  display: block;
+  margin-left: 135px;
+  margin-right: 15px;
+  min-width: 500px;
+} */
+
+.custom-table ul {
+  display: block;
+  text-align: left;
+  float: left;
+  margin-top: 0px;
+}
+.custom-table li {
+  display: block;
+  text-align: left;
+}
+
+.custom-table img {
+  float: left;
+}
+
+.custom-table {
+  border-color: white;
+}
+
+.temp table tr td {
+  text-align: left;
+  padding: 0px;
+  border: 0px;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: #f44336;
+}
+
+.button2 {
+  background-color: #008CBA;
+}
+
+.button3 {
+  background-color: #555555;
+}
+
+aside {
+  display: inline-block;
+  float: right;
+  position: fixed;
+  top: 300px;
+  right: 150px;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+.index_image {
+  float: right;
+}
+
+.footerbar {
+  color: white;
+}
+
+.col-25 {
+  float: left;
+  width: 20%;
+  margin-top: 4px;
+  font-weight: bold;
+}
+
+.col-75 {
+  float: left;
+  width: 40%;
+  margin-top: 4px;
+  height: 25px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  border-radius: 5px;
+  padding: 5px;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: left;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+footer p a {
+  color: white;
+  text-decoration: none;
+}
+
+.watermark {
+  position: absolute;
+  right: 50px;
+}
+
+.connection-td-width{
+  width: 10%;
+}
+
+.ErrorMessage{
+  color: red;
+}

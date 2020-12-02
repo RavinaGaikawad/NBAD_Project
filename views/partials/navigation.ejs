@@ -1,0 +1,9 @@
+<hr>
+<nav class="welcomeconnections">
+  <ul >
+    <li><a href="/connections">Connections</a></li>
+    <% if(isLoggedIn) {%>
+    <li><a class="watermark" href="/index">Hi <%= firstName %> !!</a></li>
+    <%}%>
+  </ul>
+</nav>
